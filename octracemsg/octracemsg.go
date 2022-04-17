@@ -6,7 +6,6 @@ import (
 	"go/constant"
 
 	"github.com/Warashi/ssautil"
-	"github.com/k0kubun/pp/v3"
 	"golang.org/x/tools/go/analysis"
 	"golang.org/x/tools/go/analysis/passes/buildssa"
 	"golang.org/x/tools/go/analysis/passes/inspect"
@@ -14,10 +13,6 @@ import (
 )
 
 const doc = "octracemsg is ..."
-
-func init() {
-	pp.SetDefaultMaxDepth(2)
-}
 
 // Analyzer is ...
 var Analyzer = &analysis.Analyzer{
@@ -43,6 +38,7 @@ func StartSpan(f *ssa.Function) *ssa.Call {
 	}
 	return nil
 }
+
 func IsTarget(f *ssa.Function) bool {
 	if !ssautil.IsExported(f) {
 		return false
