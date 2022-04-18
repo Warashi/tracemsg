@@ -4,6 +4,8 @@ import (
 	"context"
 	"fmt"
 	"go/constant"
+	"go/types"
+	"strings"
 
 	"github.com/Warashi/ssautil"
 	"golang.org/x/tools/go/analysis"
@@ -52,6 +54,28 @@ func IsTarget(f *ssa.Function) bool {
 	return false
 }
 
+func Name(typ types.Type) string {
+	switch typ := typ.(type) {
+	case *types.Pointer:
+		return Name(typ.Elem())
+	case *types.Named:
+		return typ.Obj().Name()
+	}
+	panic(fmt.Errorf("unknown type: %T", typ))
+}
+
+func want(f *ssa.Function) string {
+	var builder strings.Builder
+	builder.WriteString(f.Package().Pkg.Name())
+	builder.WriteString(".")
+	if recv := f.Signature.Recv(); recv != nil {
+		builder.WriteString(Name(recv.Type()))
+		builder.WriteString("#")
+	}
+	builder.WriteString(f.Name())
+	return builder.String()
+}
+
 func report(ctx context.Context, f *ssa.Function) {
 	if !IsTarget(f) {
 		return
@@ -69,7 +93,7 @@ func report(ctx context.Context, f *ssa.Function) {
 				continue
 			}
 			actual := constant.StringVal(o.Value)
-			want := f.String()
+			want := want(f)
 			if actual == want {
 				return
 			}
