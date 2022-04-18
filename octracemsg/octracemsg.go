@@ -3,6 +3,7 @@ package octracemsg
 import (
 	"context"
 	"fmt"
+	"go/ast"
 	"go/constant"
 	"go/types"
 	"strings"
@@ -97,7 +98,7 @@ func report(ctx context.Context, f *ssa.Function) {
 			if actual == want {
 				return
 			}
-			node, ok := ssautil.CallExpr(ctx, call)
+			node, ok := ssautil.Node[*ast.CallExpr](ctx, call)
 			if !ok {
 				return
 			}
