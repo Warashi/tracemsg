@@ -42,7 +42,11 @@ func StartSpan(f *ssa.Function) *ssa.Call {
 	return nil
 }
 
-func IsTarget(f *ssa.Function) bool {
+func IsTarget(ctx context.Context, f *ssa.Function) bool {
+	file, ok := ssautil.Node[*ast.File](ctx, f)
+	if !ok || ssautil.IsGenerated(file) {
+		return false
+	}
 	if !ssautil.IsExported(f) {
 		return false
 	}
@@ -78,7 +82,7 @@ func want(f *ssa.Function) string {
 }
 
 func report(ctx context.Context, f *ssa.Function) {
-	if !IsTarget(f) {
+	if !IsTarget(ctx, f) {
 		return
 	}
 	pass := ssautil.Pass(ctx)
