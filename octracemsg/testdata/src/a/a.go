@@ -8,6 +8,8 @@ import (
 
 func F(ctx context.Context) {
 	trace.StartSpan(ctx, "a.F")
+	func(ctx context.Context) {}(ctx)
+	_ = func(ctx context.Context) {}
 }
 
 func G(ctx context.Context) { // want `a\.G should call trace\.StartSpan`
