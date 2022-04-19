@@ -47,7 +47,7 @@ func IsTarget(ctx context.Context, f *ssa.Function) bool {
 	if !ok || ssautil.IsGenerated(file) {
 		return false
 	}
-	if !ssautil.IsExported(f) {
+	if f.Object() == nil || !f.Object().Exported() {
 		return false
 	}
 	params := f.Signature.Params()
