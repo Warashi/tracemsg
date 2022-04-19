@@ -1,11 +1,7 @@
-github.com/Warashi/ssautil v0.0.0-20220417070825-e532590a91be h1:roW38HNe8evZgBGcs/D1z6IsXCQURP6aRU11PfN5fWk=
-github.com/Warashi/ssautil v0.0.0-20220417070825-e532590a91be/go.mod h1:sQB3LvNftJoJoNBW4aP1bYsu3SDPIF/33oF+5jRj0z8=
-github.com/Warashi/ssautil v0.0.0-20220418233853-fa2f1ef12a5d h1:k3srBOTjD0QFQaV+q0++L5Y7CH3jMBCKYcXJiYseXE8=
-github.com/Warashi/ssautil v0.0.0-20220418233853-fa2f1ef12a5d/go.mod h1:sQB3LvNftJoJoNBW4aP1bYsu3SDPIF/33oF+5jRj0z8=
-github.com/Warashi/ssautil v0.0.0-20220418235156-5ce140b47985 h1:oMKCPV4WDWb6C5WO/r1cU9f/OHStYCm0ejOYi6kWUZQ=
-github.com/Warashi/ssautil v0.0.0-20220418235156-5ce140b47985/go.mod h1:sQB3LvNftJoJoNBW4aP1bYsu3SDPIF/33oF+5jRj0z8=
-github.com/Warashi/ssautil v0.0.0-20220419000421-7798c5a27fcb h1:IcbCcg3+wUN6DBzyra89dSquTfVc5e8hACBjNc2fW7A=
-github.com/Warashi/ssautil v0.0.0-20220419000421-7798c5a27fcb/go.mod h1:sQB3LvNftJoJoNBW4aP1bYsu3SDPIF/33oF+5jRj0z8=
+github.com/Warashi/ssautil v0.0.0-20220419002210-b9f156810dc4 h1:TOU/NMYTpDFuPFl3XpmHuRDZDLMoqdvzq3Tu+P+QEmU=
+github.com/Warashi/ssautil v0.0.0-20220419002210-b9f156810dc4/go.mod h1:sQB3LvNftJoJoNBW4aP1bYsu3SDPIF/33oF+5jRj0z8=
+github.com/Warashi/ssautil v0.0.0-20220419003851-b7697f302152 h1:MtFISr9sXuhbYeeYGQ3RzH6nxSo61fp0izh/UszNFdQ=
+github.com/Warashi/ssautil v0.0.0-20220419003851-b7697f302152/go.mod h1:sQB3LvNftJoJoNBW4aP1bYsu3SDPIF/33oF+5jRj0z8=
 github.com/google/go-cmp v0.5.2 h1:X2ev0eStA3AbceY54o37/0PQ/UWqKEiiO2dKL5OPaFM=
 github.com/google/go-cmp v0.5.2/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/gNBxE=
 github.com/gostaticanalysis/testutil v0.4.0 h1:nhdCmubdmDF6VEatUNjgUZBJKWRqugoISdUv3PPQgHY=

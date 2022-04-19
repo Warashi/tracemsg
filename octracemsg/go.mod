@@ -3,7 +3,7 @@ module github.com/Warashi/tracemsg/octracemsg
 go 1.18
 
 require (
-	github.com/Warashi/ssautil v0.0.0-20220419000421-7798c5a27fcb
+	github.com/Warashi/ssautil v0.0.0-20220419003851-b7697f302152
 	github.com/gostaticanalysis/testutil v0.4.0
 	golang.org/x/tools v0.1.10
 )
